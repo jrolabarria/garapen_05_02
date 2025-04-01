@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beatles - HELP!</title>
+    <meta name="description" content="Página completa sobre la canción HELP! de The Beatles con letra, descripción y reproductor">
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rock+Salt&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ESTILOS GENERALES */
+        body {
+            
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* CABECERA */
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #e74c3c;
+            color: white;
+            margin-bottom: 30px;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        h1 {
+            font-family: 'Rock Salt', cursive;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            margin: 10px 0 0;
+            font-weight: 300;
+        }
+        
+        /* PORTADA DEL ÁLBUM */
+        .album-cover {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background-image: url('data:image/jpeg;base64,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');
+            background-size: cover;
+            border: 5px solid white;
+            transition: transform 0.3s ease;
+        }
+        
+        .album-cover:hover {
+            transform: scale(1.05);
+        }
+        
+        /* DESCRIPCIÓN DE LA CANCIÓN */
+        .song-description {
+            background-color: #fff;
+            padding: 25px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .song-description h3 {
+            color: #e74c3c;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .song-description h4 {
+            color: #3498db;
+            margin-top: 20px;
+        }
+        
+        .song-description ul {
+            padding-left: 20px;
+        }
+        
+        .song-description li {
+            margin-bottom: 8px;
+        }
+        
+        .fun-fact {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #f1c40f;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
+        /* LETRA DE LA CANCIÓN */
+        .lyrics-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .verse {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #e74c3c;
+        }
+        
+        .chorus {
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 30px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        /* REPRODUCTOR DE AUDIO */
+        .audio-player {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .audio-player button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .audio-player button:hover {
+            background-color: #2980b9;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background-color: #ddd;
+            margin-top: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background-color: #e74c3c;
+            width: 0%;
+        }
+        
+        /* PIE DE PÁGINA */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* DISEÑO RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .album-cover {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .song-description, .lyrics-container {
+                padding: 20px;
+            }
+            
+            .audio-player button {
+                padding: 8px 15px;
+                margin: 0 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- CABECERA -->
+    <header>
+        <h1>HELP!</h1>
+        <h2>THE BEATLES</h2>
+    </header>
+    
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container">
+        <!-- PORTADA DEL ÁLBUM -->
+        <div class="album-cover" title="Portada del álbum HELP! de The Beatles"></div>
+        
+        <div class="song-description">
+            <h3>Abestiari buruz</h3>
+            <div class="description-content">
+                <p>"Help!" The Beatles taldearen abesti ikonikoenetakoa da, 1965ean argitaratua bere bosgarren diskoaren eta izen bereko bigarren filmaren abesti nagusi gisa. Nagusiki John Lennonek konposatua (ohitura bezala Lennon-McCartney kredituarekin), abestiak taldearen estilo musikalaren trantsizioa markatzen du.</p>
+                
+                <h4>Testuinguru historikoa</h4>
+                <p>Lennonek "Help!" idatzi zuen estres eta antsietate garai batean, The Beatlesen ospeak maila ikaragarriak lortzen zituenean. Urte batzuk geroago, Lennonek aitortu zuen letrak bere egoera emozionala islatzen zuela: <em>"Nire laguntza oihua zen abestia"</em>.</p>
+                
+                <h4>Estilo musikala</h4>
+                <p>Musikalki, "Help!"-ek hauek batzen ditu:</p>
+                <ul>
+                    <li>The Beatlesen rock goiztiarraren erritmo azkarra</li>
+                    <li>Taldearen ezaugarri diren ahots harmoniak</li>
+                    <li>Aurreko lanak baino letra pertsonalagoak</li>
+                    <li>Instrumentazio berritzailea (12 kordako gitarrak barne)</li>
+                </ul>
+                
+                <h4>Ondarea</h4>
+                <p>Abestia honela aitortua izan da:</p>
+                <ul>
+                    <li>Rolling Stone aldizkariaren arabera, denboran zehar egon diren 500 abesti onenen artean</li>
+                    <li>Grammy Hall of Famen sartua</li>
+                    <li>Ehunka artistek bertsionatua urteetan zehar</li>
+                </ul>
+                
+                <div class="fun-fact">
+                    <p>🎸 <strong>Datu bitxia:</strong> Jatorrizko bertsioa motelagoa zen, baina George Martin ekoizleak tempoa azkartzea proposatu zuen merkaturatzeko modu hobea izateko.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- LETRA DE LA CANCIÓN -->
+        <div class="lyrics-container">
+            <div class="verse" id="verse1">
+                <p>I need somebody<br>
+                (Help) not just anybody<br>
+                (Help) you know I need someone<br>
+                Help</p>
+            </div>
+            
+            <div class="verse">
+                <p>When I was younger, so much younger than today<br>
+                I never needed anybody's help in any way<br>
+                But now these days are gone<br>
+                I'm not so self assured<br>
+                Now I find I've changed my mind<br>
+                I've opened up the doors</p>
+            </div>
+            
+            <div class="chorus">
+                <p>Help me if you can, I'm feeling down<br>
+                And I do appreciate you being 'round<br>
+                Help me get my feet back on the ground<br>
+                Won't you please, please help me</p>
+            </div>
+            
+            <div class="verse">
+                <p>And now my life has changed in, oh, so many ways<br>
+                My independence seems to vanish in the haze<br>
+                But every now and then I feel so insecure<br>
+                I know that I just need you like<br>
+                I've never done before</p>
+            </div>
+            
+            <div class="chorus">
+                <p>Help me if you can, I'm feeling down<br>
+                And I do appreciate you being 'round<br>
+                Help me get my feet back on the ground<br>
+                Won't you please, please help me</p>
+            </div>
+            
+            <div class="verse">
+                <p>When I was younger, so much younger than today<br>
+                I never needed anybody's help in any way<br>
+                (Now) But now these days are gone<br>
+                I'm not so self assured<br>
+                (And now I've found) now I find I've changed my mind<br>
+                I've opened up the doors</p>
+            </div>
+            
+            <div class="chorus">
+                <p>Help me if you can, I'm feeling down<br>
+                And I do appreciate you being round<br>
+                Help me, get my feet back on the ground<br>
+                Won't you please, please help me<br>
+                Help me, help me, ooh</p>
+            </div>
+        </div>
+        
+        <!-- REPRODUCTOR DE AUDIO -->
+        <div class="audio-player">
+            <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+            <button id="playBtn">▶ Reproducir</button>
+            <button id="pauseBtn">⏸ Pausar</button>
+            <button id="stopBtn">⏹ Detener</button>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p> Página web sobre HELP! de The Beatles</p>
+        <p>© 2025 - Todos los derechos reservados a los respectivos propietarios</p>
+    </footer>
+    
+    <!-- JAVASCRIPT -->
+    <script>
+        // Obtener elementos del DOM
+        const audio = document.getElementById('audio');
+        const playBtn = document.getElementById('playBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const progressBar = document.getElementById('progressBar');
+        
+        // Evento para actualizar la barra de progreso
+        audio.addEventListener('timeupdate', updateProgress);
+        
+        // Función para actualizar la barra de progreso
+        function updateProgress() {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+        
+        // Evento para reproducir
+        playBtn.addEventListener('click', () => {
+            audio.play();
+        });
+        
+        // Evento para pausar
+        pauseBtn.addEventListener('click', () => {
+            audio.pause();
+        });
+        
+        // Evento para detener
+        stopBtn.addEventListener('click', () => {
+            audio.pause();
+            audio.currentTime = 0;
+            progressBar.style.width = '0%';
+        });
+        
+        // Evento para hacer clic en la barra de progreso
+        progressBar.parentElement.addEventListener('click', (e) => {
+            const width = progressBar.parentElement.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            
+            audio.currentTime = (clickX / width) * duration;
+        });
+    </script>
+</body>
+</html>
