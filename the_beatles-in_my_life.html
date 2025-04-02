@@ -8,8 +8,40 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            text-align: center;
             color: #222;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #ffcc00;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
         }
         .header {
             background-color: #ffcc00;
@@ -30,18 +62,59 @@
             background-color: #222;
             color: white;
         }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        #lyrics {
+            max-height: 400px;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
-    <div class="header">The Beatles - In My Life</div>
-    <div class="content">
-        <h2>In My Life</h2>
-        <p>There are places I remember all my life, though some have changed...</p>
-        <audio controls>
-            <source src="in_my_life.mp3" type="audio/mpeg">
-            
-        </audio>
+    <div class="sidebar">
+        <h3>The Beatles Songs</h3>
+        <ul>
+            <li><a href="the_beatles-hey_jude.html">Hey Jude</a></li>
+            <li><a href="the_beatles-yesterday.html">Yesterday</a></li>
+            <li><a href="the_beatles-i_want_to_hold_your_hand.html">I Want to Hold Your Hand</a></li>
+            <li><a href="the_beatles-let_it_be.html">Let It Be</a></li>
+            <li><a href="the_beatles-in_my_life.html">In My Life</a></li>
+            <li><a href="the_beatles-a_day_in_the_life.html">A Day in the Life</a></li>
+            <li><a href="the_beatles-help.html">Help!</a></li>
+            <li><a href="the_beatles-she_loves_you.html">She Loves You</a></li>
+            <li><a href="the_beatles-strawberry_fields_forever.html">Strawberry Fields Forever</a></li>
+            <li><a href="the_beatles-norwegian_woods.html">Norwegian Wood</a></li>
+            <li><a href="the_beatles-while_my_guitar_gently_weeps.html">While My Guitar Gently Weeps</a></li>
+            <li><a href="the_beatles-eleanor_rigby.html">Eleanor Rigby</a></li>
+            <li><a href="the_beatles-i_saw_her_standing_there.html">I Saw Her Standing There</a></li>
+            <li><a href="the_beatles-a_hard_day_s_night.html">A Hard Day's Night</a></li>
+            <li><a href="the_beatles-please_please_me.html">Please Please Me</a></li>
+        </ul>
     </div>
-    <div class="footer">&copy; 2025 The Beatles Fan Page</div>
+    <div class="main-content">
+        <div class="header">The Beatles - In My Life</div>
+        <div class="content" id="lyrics">
+            <h2>In My Life</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Rubber_Soul%2C_Mathew_Street%2C_Liverpool_-_The_Beatles_on_the_windows_%282016-08-27_21.47.34_by_Tee_Cee%29.jpg/640px-Rubber_Soul%2C_Mathew_Street%2C_Liverpool_-_The_Beatles_on_the_windows_%282016-08-27_21.47.34_by_Tee_Cee%29.jpg" alt="The Beatles - Rubber Soul">
+            <p>There are places I remember all my life, though some have changed...</p>
+            <p>Some forever, not for better...</p>
+            <p>Some have gone, and some remain...</p>
+            <p>All these places have their moments...</p>
+            <p>With lovers and friends, I still can recall...</p>
+            <p>Some are dead and some are living...</p>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YBcdt6DsLQA" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+    <script>
+        document.querySelector('iframe').addEventListener('load', function() {
+            let lyrics = document.getElementById('lyrics');
+            let scrollInterval = setInterval(function() {
+                lyrics.scrollBy(0, 1);
+            }, 100);
+        });
+    </script>
 </body>
 </html>
