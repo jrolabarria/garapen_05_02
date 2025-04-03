@@ -6,7 +6,7 @@ body {
   }
   .wrapper {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
   }
   
   /* Sidebar */
@@ -149,7 +149,9 @@ body {
   .lyrics .line {
     font-weight: bold;
   }
-  
+  .letra{
+    font-style: italic;
+  }
   .see-more {
     color: #0071e3;
     margin-top: 10px;
