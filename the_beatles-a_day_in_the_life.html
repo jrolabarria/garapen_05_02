@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleccionamos Daniel Mónica</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Papyrus&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; 
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcc00; 
+            color: #222;
+            padding: 20px;
+        }
+        header h1 {
+            font-family: 'Lobster', cursive;
+        }
+        header h2 {
+            font-family: 'Papyrus', fantasy;
+        }
+        main {
+            padding: 20px;
+        }
+        .letra, .significado, .video {
+            background: #f0e68c; 
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .imagen {
+            margin: 20px auto;
+            width: 80%;
+        }
+        .imagen img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            background-color: #ffcc00;
+            color: #222;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .integrantes {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .integrante {
+            background-color: #ffcc00;
+            width: 20%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+        }
+        .integrante img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .integrante h4 {
+            font-family: 'Papyrus', fantasy;
+        }
+
+        .audio-player {
+            margin: 20px auto;
+            width: 80%;
+            background-color: #f0e68c;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Coleccionamos Daniel Mónica</h1>
+        <h2>The Beatles - A Day in the Life</h2>
+    </header>
+    <main>
+        <section class="imagen">
+            <img src="/img/que asco.jpg" alt="The Beatles">
+        </section>
+        <!-- Reproductor de la canción -->
+        <section class="audio-player">
+            <h3>Reproductor de Audio</h3>
+            <audio controls>
+                <source src="/aud/day.mp3" type="audio/mpeg">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+        </section>
+        <section class="significado">
+            <h3>Significado</h3>
+            <p>La canción refleja la percepción de la vida cotidiana, con referencias a noticias y experiencias personales...</p>
+        </section>
+        <section class="video">
+            <h3>Video</h3>
+            <iframe width="560" height="315" src="/vid/day.mp4" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+
+        <section class="integrantes">
+            <div class="integrante">
+                <img src="/img/jon.jpg" alt="John Lennon">
+                <h4>John Lennon</h4>
+            </div>
+            <div class="integrante">
+                <img src="/img/paul.jpg" alt="Paul McCartney">
+                <h4>Paul McCartney</h4>
+            </div>
+            <div class="integrante">
+                <img src="/img/yorch.jpg" alt="George Harrison">
+                <h4>George Harrison</h4>
+            </div>
+            <div class="integrante">
+                <img src="/img/ringo.jpg" alt="Ringo Starr">
+                <h4>Ringo Starr</h4>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Coleccionamos Daniel Mónica</p>
+    </footer>
+</body>
+</html>
