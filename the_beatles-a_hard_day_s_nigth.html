@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Hard Day's Night - The Beatles</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <audio id="needle-sound" src="aud/needle.mp3"></audio>
+  <div class="intro-overlay" id="intro-overlay">
+    <h1>¡Bienvenido a los 60's!</h1>
+  </div>
+  <a href="the_beatles.html" class="back-button">← Volver</a>
+
+  <header>
+    <h1>A Hard Day's Night</h1>
+    <p>Un viaje retro y brillante con The Beatles</p>
+  </header>
+
+  <section class="gramo-container">
+    <div class="tocadiscos">
+      <img src="img/1.jpg" alt="Vinilo" class="vinilo" id="vinilo" />
+      <img src="img/needle.png" alt="Aguja" class="aguja" id="aguja" />
+    </div>
+    <audio id="player" src="aud/1.mp3" controls></audio>
+    <div class="letra-karaoke" id="letra-karaoke">
+      <p id="linea1">It's been a hard day's night...</p>
+      <p id="linea2">And I been working like a dog...</p>
+      <p id="linea3">But when I get home to you...</p>
+      <p id="linea4">I find the things that you do...</p>
+    </div>
+  </section>
+
+  <section class="section compra-cancion">
+    <h2>Compra la Canción</h2>
+    <img src="img/1.jpg" alt="Portada" class="cover-mini">
+    <p>Consigue “A Hard Day’s Night” en alta calidad (MP3/WAV) con bonus track exclusivo.</p>
+    <p><strong>Precio:</strong> 1,99€</p>
+    <button>Comprar ahora</button>
+  </section>
+
+  <section class="section tienda">
+    <h2>Tienda Retro</h2>
+    <div class="producto">
+      <img src="img/2.jpg" alt="Vinilo original"/>
+      <h3>Vinilo 1964</h3>
+      <p>Reedición coleccionista</p>
+      <button>Comprar</button>
+    </div>
+    <div class="producto">
+      <img src="img/3.jpg" alt="Camiseta Beatles"/>
+      <h3>Camiseta Vintage</h3>
+      <p>Edición limitada</p>
+      <button>Comprar</button>
+    </div>
+    <div class="producto">
+      <img src="img/4.jpg" alt="Poster Beatles"/>
+      <h3>Póster Retro</h3>
+      <p>Arte oficial de la película</p>
+      <button>Comprar</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 lea artibai ikastetxea</p>
+  </footer>
+
+  <script>
+    const player = document.getElementById("player");
+    const vinilo = document.getElementById("vinilo");
+    const aguja = document.getElementById("aguja");
+    const intro = document.getElementById("intro-overlay");
+    const needleFX = document.getElementById("needle-sound");
+
+    player.addEventListener("play", () => {
+    aguja.classList.add("retirada");      
+  vinilo.classList.add("gira");
+  needleFX.currentTime = 0;                
+  needleFX.play().catch(() => {});         
+});
+
+player.addEventListener("pause", () => {
+  aguja.classList.remove("retirada"); 
+  vinilo.classList.remove("gira");   
+});
+
+player.addEventListener("ended", () => {
+  aguja.classList.remove("retirada"); 
+  vinilo.classList.remove("gira");    
+});
+
+
+    // Letra sincronizada
+    const lines = [
+      document.getElementById("linea1"),
+      document.getElementById("linea2"),
+      document.getElementById("linea3"),
+      document.getElementById("linea4")
+    ];
+
+    player.addEventListener("timeupdate", () => {
+      const t = player.currentTime;
+      lines.forEach((l) => l.classList.remove("resaltado"));
+      if (t > 1) lines[0].classList.add("resaltado");
+      if (t > 4) lines[1].classList.add("resaltado");
+      if (t > 8) lines[2].classList.add("resaltado");
+      if (t > 12) lines[3].classList.add("resaltado");
+    });
+
+    // Intro animada con sonido
+    window.addEventListener("load", () => {
+      intro.classList.add("fade-out");
+      setTimeout(() => {
+        intro.style.display = "none";
+        needleFX.play().catch(() => {}); // si falla el sonido, no se rompe
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>
