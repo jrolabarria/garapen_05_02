@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yesterday - The Beatles</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000000; /* Fondo negro */
+            color: #ffffff; /* Texto blanco */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333333;
+            padding: 20px;
+            color: #ffcc00;
+            text-align: center; /* Centrado del texto del header */
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        footer {
+            background-color: #333333;
+            color: #ffcc00;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .image-container {
+            flex: 1;
+            padding: 20px;
+        }
+        .text-container {
+            flex: 2;
+            padding: 20px;
+            text-align: left;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #ffcc00; /* Color amarillo para el subtítulo */
+            font-style: italic;
+        }
+        .lyrics {
+            font-style: italic;
+            margin: 20px 0;
+            color: #fff; /* Letra blanca para la letra de la canción */
+        }
+        audio {
+            margin-top: 20px;
+        }
+        .beatles-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .info {
+            font-size: 1.2em;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .song-history {
+            font-size: 1.2em;
+            color: #fff;
+            margin-top: 10px; /* Reducido el margen superior */
+        }
+        .btn {
+            background-color: #ffcc00;
+            color: #333333;
+            padding: 6px 12px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #e6b800; /* Color más oscuro cuando se pasa el ratón */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yesterday - The Beatles</h1>
+    </header>
+    
+    <div class="container">
+        <!-- Imagen de los Beatles -->
+        <div class="image-container">
+            <img class="beatles-image" src="img/yesterday.jpg" alt="The Beatles">
+        </div>
+        
+        <!-- Texto de la canción y la información adicional -->
+        <div class="text-container">
+            <h2>"Oh, I believe in yesterday"</h2>
+            <h3>The Beatles</h3>
+            <p class="lyrics">
+                Yesterday, all my troubles seemed so far away<br>
+                Now it looks as though they're here to stay<br>
+                Oh, I believe in yesterday<br>
+            </p>
+            <audio controls>
+                <source src="aud/yesterday.mp3" type="audio/mp3">
+            </audio>
+
+            <div class="info">
+                <h4>Kantaren informazioa:</h4>
+                <p><strong>Konpositoreak:</strong> John Lennon & Paul McCartney</p>
+                <p><strong>Argitalpen urtea:</strong> 1965</p>
+                <p><strong>Albuma:</strong> Help!</p>
+                <p><strong>Generoa:</strong> Balada, Rock</p>
+            </div>
+
+            <!-- Historia de la canción -->
+            <div class="song-history">
+                <h4>Kantaren historia:</h4>
+                <p>"Yesterday" Paul McCartney-k idatzitako abesti bat da eta The Beatles taldearen 
+                    abestirik ospetsuenetakoa da. Abestiaren sinpletasunagatik izan zuen hain eragin handia, 
+                    garairako ohikoa baino instrumentzaio normalagoa erabili baitzuen.</p>
+            </div>
+
+            <!-- Botón "Hasiera" debajo de la historia de la canción -->
+            <a href="the_beatles.html" class="btn">Hasiera</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Lea Artibai Ikastetxea</p>
+    </footer>
+</body>
+</html>
