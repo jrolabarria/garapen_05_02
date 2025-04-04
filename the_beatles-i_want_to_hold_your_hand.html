@@ -45,9 +45,7 @@
         }
 
         .eskerra, .eskuma {
-            background-color: #fff;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             text-align: center;
         }
@@ -55,29 +53,59 @@
         .eskerra {
             grid-column: 1 / 4;
             grid-row: 1 / 1;
+            background-image: radial-gradient(circle, #ffcc99d7, #ff9966d8, #ff66999a);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);        
         }
 
         .erdia {
             grid-column: 4 / 10;
             grid-row: 1 / 1;
             text-align: center;
-            
         }
 
         .eskuma {
-            grid-column: 10 / 13;
-            grid-row: 1 / 1;
-            background-color: #ffcc00; /* Color vibrante */
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-            font-family: 'Comic Sans MS', cursive; /* Tipografía retro */
-            color: #333;
-            border: 3px dashed #ff5722; /* Borde llamativo */
-            background-image: radial-gradient(circle, #ffcc00, #ff9966, #ff6699); 
-            animation: rotateBackground 10s linear infinite; 
+        grid-column: 10 / 13;
+        grid-row: 1 / 1;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        font-family: 'Comic Sans MS', cursive;
+        background-image: radial-gradient(circle, #ffcc99, #ff9966, #ff6699); 
+        animation: rotateBackground 10s linear infinite; 
+    }
+
+    @keyframes rotateBackground {
+        0% {
+            background-position: 0% 50%;
         }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+        .eskuma p {
+         font-size: 1.2rem;
+        line-height: 1.5;
+        font-weight: bold;
+        color: rebeccapurple; 
+        text-shadow: 2px 2px 4px rgb(219, 219, 219);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 
         .argazkia {
             width: 100%;
@@ -98,20 +126,20 @@
         }
 
         .song-list li {
-        display: block; /* Cambiar a bloque para que los elementos se apilen verticalmente */
-        margin: 10px 0; /* Añadir espacio entre los elementos */
-    }
+            display: block;
+            margin: 10px 0;
+        }
 
         .song-list a {
             text-decoration: none;
-            color: #ff5722; 
+            color: turquoise; 
             font-size: 1.5rem;
             font-family: 'Pacifico', cursive; 
             transition: color 0.3s ease, transform 0.2s ease;
         }
 
         .song-list a:hover {
-            color: #4caf50; 
+            color: rebeccapurple;
             transform: scale(1.1); 
         }
 
@@ -165,6 +193,35 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        #members ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-items: center; 
+        align-items: center; 
+    }
+
+    #members li {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    #members img {
+        width: 100%;
+        max-width: 150px;
+        border-radius: 50%; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #members img:hover {
+        transform: scale(1.1); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    }
 
         footer {
             background-color: #333;
@@ -182,6 +239,7 @@
         <div class="eskerra">
             <h3>Éxitos de los años 60</h3>
             <ul class="song-list">
+                <li><a href="the_beatles.html">Inicio</a></li>
                 <li><a href="the_beatles-hey_jude.html">Hey Jude</a></li>
                 <li><a href="the_beatles-yesterday.html">Yesterday</a></li>
                 <li><a href="the_beatles-i_want_to_hold_your_hand.html">I Want to Hold Your Hand</a></li>
@@ -200,57 +258,36 @@
                 <div class="tabs">
                     <button class="tab-button active" onclick="showTab('lyrics')">Letra</button>
                     <button class="tab-button" onclick="showTab('photos')">Fotos</button>
+                    <button class="tab-button" onclick="showTab('members')">Miembros</button>
                 </div>
                 <div id="lyrics" class="tab-content active">
                     <details>
                         <summary style="cursor: pointer; font-weight: bold; color: #ff5722; font-size: 1.2rem;">Ver Letra Completa</summary>
                         <p>
-                
                             Oh, yeah, I'll tell you somethin'<br>
                             I think you'll understand<br>
                             When I say that somethin'<br>
                             I want to hold your hand<br>
                             I want to hold your hand<br>
                             I want to hold your hand<br>
-                            Oh, please, say to me<br>
-                            You'll let me be your man<br>
-                            And please, say to me<br>
-                            You'll let me hold your hand<br>
-                            You'll let me hold your hand<br>
-                            I want to hold your hand<br>
-                            And when I touch you<br>
-                            I feel happy inside<br>
-                            It's such a feelin' that my love<br>
-                            I can't hide<br>
-                            I can't hide<br>
-                            I can't hide<br>
-                            Yeah, you got that somethin'<br>
-                            I think you'll understand<br>
-                            When I say that somethin'<br>
-                            I want to hold your hand<br>
-                            I want to hold your hand<br>
-                            I want to hold your hand<br>
-                            And when I touch you<br>
-                            I feel happy inside<br>
-                            It's such a feelin' that my love<br>
-                            I can't hide<br>
-                            I can't hide<br>
-                            I can't hide<br>
-                            Yeah, you got that somethin'<br>
-                            I think you'll understand<br>
-                            When I feel that somethin'<br>
-                            I want to hold your hand<br>
-                            I want to hold your hand<br>
-                            I want to hold your hand<br>
-                            I want to hold your hand.<br>
+                            ...
                         </p>
                     </details>  
                 </div>
                 <div id="photos" class="tab-content">
                     <img src="img/Beatles-I_want_to_hold_your_hand.jpg" alt="The Beatles Photo 1" class="tab-photo">
                     <img src="img/Beatles-I_want_to_hold_your_hand2.jpg" alt="The Beatles Photo 2" class="tab-photo">
-                    <img src="img/Beatles-I_want_to_hold_your_hand3.jpg" alt="The Beatles Photo 1" class="tab-photo">
-                    <img src="img/Beatles-I_want_to_hold_your_hand4.jpg" alt="The Beatles Photo 1" class="tab-photo">
+                    <img src="img/Beatles-I_want_to_hold_your_hand3.jpg" alt="The Beatles Photo 3" class="tab-photo">
+                    <img src="img/Beatles-I_want_to_hold_your_hand4.jpg" alt="The Beatles Photo 4" class="tab-photo">
+                </div>
+                <div id="members" class="tab-content">
+                    <h3>Miembros de The Beatles</h3>
+                    <ul style="list-style: none; padding: 0; text-align: left;">
+                       <img src="img/jon.jpg"> <li><strong>John Lennon</strong> - Vocalista, guitarra rítmica</li>
+                        <img src="img/paul.jpg"><li><strong>Paul McCartney</strong> - Vocalista, bajo</li>
+                        <img src="img/yorch.jpg"><li><strong>George Harrison</strong> - Guitarra principal, vocalista</li>
+                        <img src="img/ringo.jpg"><li><strong>Ringo Starr</strong> - Batería, vocalista</li>
+                    </ul>
                 </div>
             </div>
         </div>
