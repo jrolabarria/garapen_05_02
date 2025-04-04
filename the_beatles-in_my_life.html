@@ -7,8 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: url('https://example.com/tu-imagen.jpg') no-repeat center center fixed; /* Reemplaza con tu URL */
-            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            background: url('https://example.com/tu-imagen.jpg') no-repeat center center fixed; 
+            background-size: cover; /
             color: #222;
             display: flex;
             flex-direction: row;
@@ -18,7 +18,7 @@
         }
         .sidebar-left {
             width: 250px;
-            background-color: rgba(255, 204, 0, 0.8); /* Fondo semitransparente */
+            background-color: rgba(255, 204, 0, 0.8); 
             padding: 20px;
             height: 100vh;
             position: fixed;
@@ -49,11 +49,11 @@
             transition: color 0.3s;
         }
         .sidebar-left ul li a:hover {
-            color: #000; /* Cambia el color al pasar el mouse */
+            color: #000; 
         }
         .sidebar-right {
             width: 250px;
-            background-color: rgba(255, 204, 0, 0.8); /* Fondo semitransparente */
+            background-color: rgba(255, 204, 0, 0.8); 
             padding: 20px;
             height: 100vh;
             position: fixed;
@@ -83,7 +83,7 @@
         }
         .main-content {
             margin-left: 270px;
-            margin-right: 270px; /* Espacio para la barra derecha */
+            margin-right: 270px; 
             padding-left: 20px;
             padding-right: 20px;
             padding-bottom: 20px;
@@ -97,12 +97,12 @@
             font-weight: bold;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px; /* Espacio debajo del encabezado */
+            margin-bottom: 20px; 
         }
         .content {
             margin: 20px;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+            background-color: rgba(255, 255, 255, 0.9); 
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border: 1px solid #ddd;
@@ -120,14 +120,14 @@
             position: relative;
             margin-bottom: 20px;
             scroll-behavior: smooth;
-            -ms-overflow-style: none; /* IE y Edge */
-            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; 
+            scrollbar-width: none;
             padding: 10px;
             background-color: #fafafa;
             border-radius: 5px;
         }
         #lyrics::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, etc. */
+            display: none; 
         }
         #lyrics p {
             margin: 5px 0;
@@ -192,19 +192,19 @@
     <div class="sidebar-right">
         <h3>Members</h3>
         <div class="member">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/John_Lennon_1967_%28cropped%29.jpg/100px-John_Lennon_1967_%28cropped%29.jpg" alt="John Lennon">
+            <img src="img/john lennon.jpg" alt="John Lennon">
             <span>John Lennon</span>
         </div>
         <div class="member">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Paul_McCartney_2021_%28cropped%29.jpg/100px-Paul_McCartney_2021_%28cropped%29.jpg" alt="Paul McCartney">
+            <img src="img/paul mccartney.jpg" alt="Paul McCartney">
             <span>Paul McCartney</span>
         </div>
         <div class="member">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/George_Harrison_1974_%28cropped%29_%28cropped%29.jpg/100px-George_Harrison_1974_%28cropped%29_%28cropped%29.jpg" alt="George Harrison">
+            <img src="img/George Harrison.jpg" alt="George Harrison">
             <span>George Harrison</span>
         </div>
         <div class="member">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Ringo_Starr_2013_%28cropped%29.jpg/100px-Ringo_Starr_2013_%28cropped%29.jpg" alt="Ringo Starr">
+            <img src="img/ringo-starr.jpeg" alt="Ringo Starr">
             <span>Ringo Starr</span>
         </div>
     </div>
@@ -226,7 +226,7 @@
         }
 
         function onPlayerReady(event) {
-            // El video no se inicia automáticamente
+            
         }
 
         function onPlayerStateChange(event) {
@@ -238,7 +238,7 @@
                         isScrolling = true;
                         scrollInterval = setInterval(() => {
                             lyrics.scrollTop += 1;
-                        }, 150); // Desplazamiento a 150ms
+                        }, 150); 
                     }
                 }, 100);
 
