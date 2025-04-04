@@ -56,7 +56,7 @@ body{
     grid-row: 3/4;
     grid-column: 1/ span 3;
 }
-.albuma{
+.albuma1{
     grid-row: 4/5;
     grid-column: 1/ span 3;
 }
@@ -107,11 +107,12 @@ body{
   }
 .timeline {
    display: flex;
-    gap: 40px;
+    gap: 3.435487%;
     padding: 20px;
     background-color: beige;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid black;
 }
 .albumizena{
     text-align: center;
