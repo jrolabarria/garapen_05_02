@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+}
+body{
+    max-width: 100% ;
+    padding: 0.526452364%;
+    font-family: Arial, sans-serif;
+   
+}
+.goiburua{
+    margin: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.goiburua h1{
+    border-bottom: 1px solid black;
+    width: 35.45782356%;
+}
+.kanpoa{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    background-color: beige;
+}
+.argazkia{
+    grid-row: 1/2;
+    grid-column: 1/ span 6;
+}
+.deskripzioa{
+    grid-row: 1/2;
+    grid-column: 6/ span 7;
+}
+.barrua{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    
+}
+.barrua>*{
+    margin-top: 30px;
+}
+.publikazioa{
+    grid-row: 1/2;
+    grid-column: 1/ span 3;
+}
+.generoa{
+    grid-row: 2/3;
+    grid-column: 1/ span 3;
+}
+.iraupena{
+    grid-row: 3/4;
+    grid-column: 1/ span 3;
+}
+.albuma1{
+    grid-row: 4/5;
+    grid-column: 1/ span 3;
+}
+.deskripzioa2{
+    grid-row: 5/6;
+    grid-column: 1/ span 3;
+}
+.balorazioa{
+    grid-row: 6/7;
+    grid-column: 1/ span 3;
+}
+.youtube{
+    grid-row: 7/8;
+    grid-column: 1/ span 4;
+}
+.enlazea{
+    grid-row: 7/8;
+    grid-column: 4/ span 3;
+}
+.publikazioa2{
+    grid-row: 1/2;
+    grid-column: 3/ span 3;
+}
+.generoa2{
+    grid-row: 2/3;
+    grid-column: 3/ span 3;
+}
+.iraupena2{
+    grid-row: 3/4;
+    grid-column: 3/ span 3;
+}
+.albuma2{
+    grid-row: 4/5;
+    grid-column: 3/ span 3;
+}
+.deskripzioa3{
+    grid-row: 5/6;
+    grid-column: 3/ span 4;
+}
+.balorazioa2{
+    grid-row: 6/7;
+    grid-column: 3/ span 3;
+    color: gold;
+    font-size: 1.5rem;
+}
+.gris {
+    color: lightgray;
+  }
+.timeline {
+   display: flex;
+    gap: 3.435487%;
+    padding: 20px;
+    background-color: beige;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid black;
+}
+.albumizena{
+    text-align: center;
+    margin-bottom: 40px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.albuma {
+    flex: 0 0 auto;
+    width: 135px;
+    text-align: center;
+    position: relative;
+}
+.albuma img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.urtea {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.izenburua {
+    color: #555;
+}

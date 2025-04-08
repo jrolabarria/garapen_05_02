@@ -7,39 +7,86 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: url('https://example.com/tu-imagen.jpg') no-repeat center center fixed; 
+            background-size: cover; /
             color: #222;
             display: flex;
             flex-direction: row;
             justify-content: center;
             overflow-x: hidden;
+            margin: 0;
         }
-        .sidebar {
+        .sidebar-left {
             width: 250px;
-            background-color: #ffcc00;
+            background-color: rgba(255, 204, 0, 0.8); 
             padding: 20px;
             height: 100vh;
             position: fixed;
             left: 0;
             top: 0;
             overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
         }
-        .sidebar ul {
+        .sidebar-left h3 {
+            margin-top: 0;
+            color: #222;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .sidebar-left ul {
             list-style: none;
             padding: 0;
         }
-        .sidebar ul li {
+        .sidebar-left ul li {
             margin: 10px 0;
         }
-        .sidebar ul li a {
+        .sidebar-left ul li a {
             text-decoration: none;
             color: #222;
             font-weight: bold;
             cursor: pointer;
+            transition: color 0.3s;
+        }
+        .sidebar-left ul li a:hover {
+            color: #000; 
+        }
+        .sidebar-right {
+            width: 250px;
+            background-color: rgba(255, 204, 0, 0.8); 
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            right: 0;
+            top: 0;
+            overflow-y: auto;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar-right h3 {
+            margin-top: 0;
+            color: #222;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .member img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid #fff;
         }
         .main-content {
             margin-left: 270px;
-            padding: 20px;
+            margin-right: 270px; 
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
             text-align: center;
             flex-grow: 1;
         }
@@ -48,19 +95,20 @@
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; 
         }
         .content {
             margin: 20px;
             padding: 20px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9); 
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
         }
-        .footer {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #222;
-            color: white;
+        .image-container {
+            margin-bottom: 20px;
         }
         img {
             max-width: 100%;
@@ -68,12 +116,36 @@
         }
         #lyrics {
             max-height: 400px;
-            overflow: hidden;
+            overflow-y: auto;
+            position: relative;
+            margin-bottom: 20px;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none; 
+            scrollbar-width: none;
+            padding: 10px;
+            background-color: #fafafa;
+            border-radius: 5px;
         }
+        #lyrics::-webkit-scrollbar {
+            display: none; 
+        }
+        #lyrics p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .no-link {
+        text-decoration: none;
+        color: inherit; /* Hereda el color del elemento padre */
+    }
+
+    .no-link:hover {
+        color: inherit; /* El color al pasar el ratón será el mismo */
+    }
     </style>
 </head>
 <body>
-    <div class="sidebar">
+    <div class="sidebar-left">
         <h3>The Beatles Songs</h3>
         <ul>
             <li><a href="the_beatles-hey_jude.html">Hey Jude</a></li>
@@ -95,26 +167,114 @@
     </div>
     <div class="main-content">
         <div class="header">The Beatles - In My Life</div>
-        <div class="content" id="lyrics">
+        <div class="content">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Rubber_Soul%2C_Mathew_Street%2C_Liverpool_-_The_Beatles_on_the_windows_%282016-08-27_21.47.34_by_Tee_Cee%29.jpg/640px-Rubber_Soul%2C_Mathew_Street%2C_Liverpool_-_The_Beatles_on_the_windows_%282016-08-27_21.47.34_by_Tee_Cee%29.jpg" alt="The Beatles - Rubber Soul">
+            </div>
             <h2>In My Life</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Rubber_Soul%2C_Mathew_Street%2C_Liverpool_-_The_Beatles_on_the_windows_%282016-08-27_21.47.34_by_Tee_Cee%29.jpg/640px-Rubber_Soul%2C_Mathew_Street%2C_Liverpool_-_The_Beatles_on_the_windows_%282016-08-27_21.47.34_by_Tee_Cee%29.jpg" alt="The Beatles - Rubber Soul">
-            <p>There are places I remember all my life, though some have changed...</p>
-            <p>Some forever, not for better...</p>
-            <p>Some have gone, and some remain...</p>
-            <p>All these places have their moments...</p>
-            <p>With lovers and friends, I still can recall...</p>
-            <p>Some are dead and some are living...</p>
+            <div id="lyrics">
+                <p>There are places I'll remember</p>
+                <p>All my life, though some have changed</p>
+                <p>Some forever, not for better</p>
+                <p>Some have gone and some remain</p>
+                <p>All these places have their moments</p>
+                <p>With lovers and friends I still can recall</p>
+                <p>Some are dead and some are living</p>
+                <p>In my life, I've loved them all</p>
+                <p>But of all these friends and lovers</p>
+                <p>There is no one compares with you</p>
+                <p>And these memories lose their meaning</p>
+                <p>When I think of love as something new</p>
+                <p>Though I know I'll never lose affection</p>
+                <p>For people and things that went before</p>
+                <p>I know I'll often stop and think about them</p>
+                <p>In my life, I love you more</p>
+                <p>Though I know I'll never lose affection</p>
+                <p>For people and things that went before</p>
+                <p>I know I'll often stop and think about them</p>
+                <p>In my life, I love you more</p>
+                <p>In my life, I love you more</p>
+            </div>
+            <div id="player"></div>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YBcdt6DsLQA" frameborder="0" allowfullscreen></iframe>
-
+    </div>
+    <div class="sidebar-right">
+        <h3>Members</h3>
+        <div class="member">
+            <a href="https://es.wikipedia.org/wiki/John_Lennon" target="_blank" class="no-link">
+                <img src="img/john lennon.jpg" alt="John Lennon">
+                <span>John Lennon</span>
+            </a>
+        </div>
+        <div class="member">
+            <a href="https://es.wikipedia.org/wiki/Paul_McCartney" target="_blank" class="no-link">
+                <img src="img/paul mccartney.jpg" alt="Paul McCartney">
+                <span>Paul McCartney</span>
+            </a>
+        </div>
+        <div class="member">
+            <a href="https://es.wikipedia.org/wiki/George_Harrison" target="_blank" class="no-link">
+                <img src="img/George Harrison.jpg" alt="George Harrison">
+                <span>George Harrison</span>
+            </a>
+        </div>
+        <div class="member">
+            <a href="https://es.wikipedia.org/wiki/Ringo_Starr" target="_blank" class="no-link">
+                <img src="img/ringo-starr.jpeg" alt="Ringo Starr">
+                <span>Ringo Starr</span>
+            </a>
+        </div>
+        
     </div>
     <script>
-        document.querySelector('iframe').addEventListener('load', function() {
-            let lyrics = document.getElementById('lyrics');
-            let scrollInterval = setInterval(function() {
-                lyrics.scrollBy(0, 1);
-            }, 100);
-        });
+        let scrollInterval;
+        let isScrolling = false;
+        let player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '315',
+                width: '560',
+                videoId: 'YBcdt6DsLQA',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            
+        }
+
+        function onPlayerStateChange(event) {
+            const lyrics = document.getElementById('lyrics');
+            if (event.data === YT.PlayerState.PLAYING) {
+                const checkTime = setInterval(() => {
+                    const currentTime = player.getCurrentTime();
+                    if (currentTime >= 9 && !isScrolling) {
+                        isScrolling = true;
+                        scrollInterval = setInterval(() => {
+                            lyrics.scrollTop += 1;
+                        }, 150); 
+                    }
+                }, 100);
+
+                event.target.addEventListener('onStateChange', (state) => {
+                    if (state.data !== YT.PlayerState.PLAYING) {
+                        clearInterval(scrollInterval);
+                        clearInterval(checkTime);
+                        isScrolling = false;
+                    }
+                });
+            }
+        }
+
+        // Cargar la API de YouTube
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     </script>
 </body>
 </html>

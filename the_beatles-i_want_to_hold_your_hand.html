@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Want To Hold Your Hand - The Beatles</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Fuente retro -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
-        /* Estilos generales */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #fffbcc; 
-            margin: 0;
-            padding: 0;
             color: #333;
         }
+
         h1 {
             font-family: 'Pacifico', cursive; 
             font-size: 3rem;
@@ -24,14 +29,15 @@
             letter-spacing: 2px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
+
         p {
             font-size: 1.2rem;
             line-height: 1.5;
             color: #444;
         }
 
-       
         .osoa {
+            flex: 1;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: 15px;
@@ -39,9 +45,7 @@
         }
 
         .eskerra, .eskuma {
-            background-color: #fff;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             text-align: center;
         }
@@ -49,6 +53,8 @@
         .eskerra {
             grid-column: 1 / 4;
             grid-row: 1 / 1;
+            background-image: radial-gradient(circle, #ffcc99d7, #ff9966d8, #ff66999a);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);        
         }
 
         .erdia {
@@ -58,96 +64,85 @@
         }
 
         .eskuma {
-            grid-column: 10 / 13;
-            grid-row: 1 / 1;
+        grid-column: 10 / 13;
+        grid-row: 1 / 1;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        font-family: 'Comic Sans MS', cursive;
+        background-image: radial-gradient(circle, #ffcc99, #ff9966, #ff6699); 
+        animation: rotateBackground 10s linear infinite; 
+    }
+
+    @keyframes rotateBackground {
+        0% {
+            background-position: 0% 50%;
         }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+        .eskuma p {
+         font-size: 1.2rem;
+        line-height: 1.5;
+        font-weight: bold;
+        color: rebeccapurple; 
+        text-shadow: 2px 2px 4px rgb(219, 219, 219);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 
         .argazkia {
             width: 100%;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 3s ease-in-out;
         }
 
-        /* Animación para la imagen */
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
 
-        .argazkia {
-            animation: fadeIn 3s ease-in-out;
-        }
-
-       
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        
-        .button {
-            padding: 10px 20px;
-            background-color: #ff5722;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #f44336;
-        }
-
-       
         .song-list {
             list-style-type: none;
             padding: 0;
             text-align: center;
-            margin-top: 50px;
-            display: inline-block;
         }
 
         .song-list li {
-            margin: 0 15px;
-            display: inline-block;
+            display: block;
+            margin: 10px 0;
         }
 
         .song-list a {
             text-decoration: none;
-            color: #ff5722; 
+            color: turquoise; 
             font-size: 1.5rem;
             font-family: 'Pacifico', cursive; 
             transition: color 0.3s ease, transform 0.2s ease;
         }
 
         .song-list a:hover {
-            color: #4caf50; 
+            color: rebeccapurple;
             transform: scale(1.1); 
         }
 
-        .song-list hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 10px 0;
-        }
-
-       
         .tabs-container {
             margin-top: 20px;
             text-align: center;
@@ -198,6 +193,44 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        #members ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-items: center; 
+        align-items: center; 
+    }
+
+    #members li {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    #members img {
+        width: 100%;
+        max-width: 150px;
+        border-radius: 50%; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #members img:hover {
+        transform: scale(1.1); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -206,35 +239,17 @@
         <div class="eskerra">
             <h3>Éxitos de los años 60</h3>
             <ul class="song-list">
+                <li><a href="the_beatles.html">Inicio</a></li>
                 <li><a href="the_beatles-hey_jude.html">Hey Jude</a></li>
-                <hr>
                 <li><a href="the_beatles-yesterday.html">Yesterday</a></li>
-                <hr>
                 <li><a href="the_beatles-i_want_to_hold_your_hand.html">I Want to Hold Your Hand</a></li>
-                <hr>
                 <li><a href="the_beatles-let_it_be.html">Let It Be</a></li>
-                <hr>
                 <li><a href="the_beatles-in_my_life.html">In My Life</a></li>
-                <hr>
                 <li><a href="the_beatles-a_day_in_the_life.html">A Day in the Life</a></li>
-                <hr>
                 <li><a href="the_beatles-help.html">Help!</a></li>
-                <hr>
                 <li><a href="the_beatles-she_loves_you.html">She Loves You</a></li>
-                <hr>
                 <li><a href="the_beatles-strawberry_fields_forever.html">Strawberry Fields Forever</a></li>
-                <hr>
                 <li><a href="the_beatles-norwegian_woods.html">Norwegian Wood</a></li>
-                <hr>
-                <li><a href="the_beatles-while_my_guitar_gently_weeps.html">While My Guitar Gently Weeps</a></li>
-                <hr>
-                <li><a href="the_beatles-eleanor_rigby.html">Eleanor Rigby</a></li>
-                <hr>
-                <li><a href="the_beatles-i_saw_her_standing_there.html">I Saw Her Standing There</a></li>
-                <hr>
-                <li><a href="the_beatles-a_hard_day_s_night.html">A Hard Day's Night</a></li>
-                <hr>
-                <li><a href="the_beatles-please_please_me.html">Please Please Me</a></li>
             </ul>
         </div>
         <div class="erdia">
@@ -243,56 +258,50 @@
                 <div class="tabs">
                     <button class="tab-button active" onclick="showTab('lyrics')">Letra</button>
                     <button class="tab-button" onclick="showTab('photos')">Fotos</button>
+                    <button class="tab-button" onclick="showTab('members')">Miembros</button>
                 </div>
                 <div id="lyrics" class="tab-content active">
-                    <p>
-                        Oh yeah, I'll tell you something<br>
-                        I think you'll understand<br>
-                        When I say that something<br>
-                        I want to hold your hand<br>
-                        I want to hold your hand<br>
-                        I want to hold your hand<br><br>
-
-                        Oh please, say to me<br>
-                        You'll let me be your man<br>
-                        And please, say to me<br>
-                        You'll let me hold your hand<br>
-                        Now let me hold your hand<br>
-                        I want to hold your hand<br><br>
-
-                        And when I touch you I feel happy inside<br>
-                        It's such a feeling that my love<br>
-                        I can't hide, I can't hide, I can't hide<br><br>
-
-                        Yeah, you got that something<br>
-                        I think you'll understand<br>
-                        When I feel that something<br>
-                        I want to hold your hand<br>
-                        I want to hold your hand<br>
-                        I want to hold your hand<br><br>
-
-                        And when I touch you I feel happy inside<br>
-                        It's such a feeling that my love<br>
-                        I can't hide, I can't hide, I can't hide<br><br>
-
-                        Yeah, you got that something<br>
-                        I think you'll understand<br>
-                        When I feel that something<br>
-                        I want to hold your hand<br>
-                        I want to hold your hand<br>
-                        I want to hold your hand
-                    </p>
+                    <details>
+                        <summary style="cursor: pointer; font-weight: bold; color: #ff5722; font-size: 1.2rem;">Ver Letra Completa</summary>
+                        <p>
+                            Oh, yeah, I'll tell you somethin'<br>
+                            I think you'll understand<br>
+                            When I say that somethin'<br>
+                            I want to hold your hand<br>
+                            I want to hold your hand<br>
+                            I want to hold your hand<br>
+                            ...
+                        </p>
+                    </details>  
                 </div>
                 <div id="photos" class="tab-content">
-                    <img src="img/photo1.jpg" alt="The Beatles Photo 1" class="tab-photo">
-                    <img src="img/photo2.jpg" alt="The Beatles Photo 2" class="tab-photo">
+                    <img src="img/Beatles-I_want_to_hold_your_hand.jpg" alt="The Beatles Photo 1" class="tab-photo">
+                    <img src="img/Beatles-I_want_to_hold_your_hand2.jpg" alt="The Beatles Photo 2" class="tab-photo">
+                    <img src="img/Beatles-I_want_to_hold_your_hand3.jpg" alt="The Beatles Photo 3" class="tab-photo">
+                    <img src="img/Beatles-I_want_to_hold_your_hand4.jpg" alt="The Beatles Photo 4" class="tab-photo">
+                </div>
+                <div id="members" class="tab-content">
+                    <h3>Miembros de The Beatles</h3>
+                    <ul style="list-style: none; padding: 0; text-align: left;">
+                       <img src="img/jon.jpg"> <li><strong>John Lennon</strong> - Vocalista, guitarra rítmica</li>
+                        <img src="img/paul.jpg"><li><strong>Paul McCartney</strong> - Vocalista, bajo</li>
+                        <img src="img/yorch.jpg"><li><strong>George Harrison</strong> - Guitarra principal, vocalista</li>
+                        <img src="img/ringo.jpg"><li><strong>Ringo Starr</strong> - Batería, vocalista</li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="eskuma">
-            <p>Estrenada en 1963, "I Want to Hold Your Hand" ayudó a The Beatles a abrirse paso en el mercado musical estadounidense, marcando el comienzo de la invasión británica.</p>
+            <p>Estrenada en 1963, "I Want to Hold Your Hand" ayudó a The Beatles a abrirse paso en el mercado estadounidense.</p>
+            <p>Alcanzó el número 1 en el Billboard Hot 100 el 1 de febrero de 1964 y marcó el inicio de la "Beatlemanía" en Norteamérica.</p>
+            <p>Fue la primera canción de The Beatles grabada con una grabadora de 4 pistas en los estudios Abbey Road. Paul McCartney y John Lennon la compusieron juntos en el salón de la casa de la novia de Paul.</p>
+            <p>Gracias al éxito de "I Want to Hold Your Hand", The Beatles fueron invitados a "The Ed Sullivan Show" en febrero de 1964, donde 73 millones de personas vieron su actuación en directo, un récord para la televisión estadounidense en esa época.</p>
         </div>
     </div>
+    <audio autoplay loop>
+        <source src="aud/The Beatles - I Want To Hold Your Hand - Performed Live On The Ed Sullivan Show 2964.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
 
     <footer>
         <p>© 2025 The Beatles Tribute. Todos los derechos reservados. <a href="https://www.thebeatles.com" target="_blank">Visita el sitio oficial</a></p>
@@ -300,17 +309,8 @@
 
     <script>
         function showTab(tabId) {
-            const tabs = document.querySelectorAll('.tab-content');
-            const buttons = document.querySelectorAll('.tab-button');
-
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-
-            buttons.forEach(button => {
-                button.classList.remove('active');
-            });
-
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-button').forEach(button => button.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
             document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add('active');
         }

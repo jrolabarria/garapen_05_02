@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Jude - The Beatles</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Pacifico&family=Dancing+Script:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .main-header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .name-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            margin: 0.5rem 0 0;
+            font-weight: 700;
+        }
+        
+        .song-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .beatles-gallery {
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .gallery-img {
+            width: 100%;
+            display: block;
+        }
+        
+        .song-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .song-header h2 {
+            font-size: 2.5rem;
+            color: #1a2a6c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .song-header h3 {
+            font-size: 1.5rem;
+            color: #b21f1f;
+            margin-top: 0;
+            font-weight: 300;
+        }
+        
+        .album-info {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .lyrics {
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .verse, .chorus, .outro {
+            margin-bottom: 1.5rem;
+        }
+        
+        .chorus {
+            font-weight: bold;
+            color: #1a2a6c;
+        }
+        
+        .outro {
+            font-style: italic;
+            color: #b21f1f;
+        }
+        
+        .beatles-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .beatle-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #1a2a6c;
+        }
+        
+        .beatles-fact {
+            flex: 1;
+            padding: 0 1rem;
+        }
+        
+        .beatles-fact h4 {
+            margin-top: 0;
+            color: #b21f1f;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .copyright {
+            font-size: 0.8rem;
+            margin: 0.5rem 0;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: #1a2a6c;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #b21f1f;
+        }
+        
+        .video-link {
+            display: block;
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f0f0f0;
+            border-radius: 8px;
+            color: #1a2a6c;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        
+        .video-link:hover {
+            background: #e0e0e0;
+        }
+        
+        .video-link i {
+            margin-right: 0.5rem;
+            color: #b21f1f;
+        }
+        
+        .wikipedia-link {
+            display: block;
+            text-align: center;
+            margin: 1rem 0 2rem;
+            color: #1a2a6c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .wikipedia-link:hover {
+            text-decoration: underline;
+            color: #b21f1f;
+        }
+        
+        .songs-nav {
+            margin: 2rem 0;
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .songs-nav h4 {
+            text-align: center;
+            color: #1a2a6c;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .songs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.8rem;
+        }
+        
+        .song-link {
+            display: block;
+            padding: 0.5rem;
+            background: #e0e0e0;
+            border-radius: 4px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .song-link:hover {
+            background: #1a2a6c;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .song-container {
+                padding: 1rem;
+            }
+            
+            .name-title {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .song-header h2 {
+                font-size: 2rem;
+            }
+            
+            .beatles-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .songs-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="name-title">Colecciones Daniel Mariah</h1>
+            <p class="tagline">Música y Letras</p>
+        </div>
+    </header>
+
+    <div class="song-container">
+        <div class="beatles-gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Beatles_ad_1965_just_the_beatles_crop.jpg" alt="The Beatles 1965" class="gallery-img">
+        </div>
+
+        <header class="song-header">
+            <h2>Hey Jude</h2>
+            <h3>The Beatles</h3>
+            <div class="album-info">From the album "The Beatles" (1968)</div>
+        </header>
+
+        
+        <div class="songs-nav">
+            <h4>Otras canciones de The Beatles</h4>
+            <div class="songs-grid">
+                <a href="the_beatles.html" class="song-link">The Beatles</a>
+                <a href="the_beatles-hey_jude.html" class="song-link">Hey Jude </a>
+                <a href="the_beatles-yesterday.html" class="song-link">Yesterday </a>
+                <a href="the_beatles-i_want_to_hold_your_hand.html" class="song-link">I Want To Hold Your Hand </a>
+                <a href="the_beatles-let_it_be.html" class="song-link">Let It Be </a>
+                <a href="the_beatles-in_my_life.html" class="song-link">In My Life </a>
+                <a href="the_beatles-a_day_in_the_life.html" class="song-link">A Day In The Life </a>
+                <a href="the_beatles-help.html" class="song-link">Help </a>
+                <a href="the_beatles-she_loves_you.html" class="song-link">She Loves You </a>
+                <a href="the_beatles-strawberry_fields_forever.html" class="song-link">Strawberry Fields Forever </a>
+                <a href="the_beatles-norwegian_woods.html" class="song-link">Norwegian Woods </a>
+                <a href="the_beatles-while_my_guitar_gently_weeps.html" class="song-link">While My Guitar Gently Weeps </a>
+                <a href="the_beatles-eleanor_rigby.html" class="song-link">Eleanor Rigby </a>
+                <a href="the_beatles-i_saw_her_standing_there.html" class="song-link">I Saw Her Standing There </a>
+                <a href="the_beatles-a_hard_day_s_night.html" class="song-link">A Hard Day's Night </a>
+                <a href="the_beatles-please_please_me.html" class="song-link">Please Please Me </a>
+            </div>
+        </div>
+
+        <a href="https://www.youtube.com/watch?v=mQER0A0ej0M" target="_blank" class="video-link">
+            <i class="fab fa-youtube"></i> Ver video oficial en YouTube
+        </a>
+
+        <a href="https://es.wikipedia.org/wiki/The_Beatles" target="_blank" class="wikipedia-link">
+            Más información sobre The Beatles en Wikipedia
+        </a>
+
+        <div class="lyrics">
+            <div class="verse">
+                <p>Hey Jude, don't make it bad</p>
+                <p>Take a sad song and make it better</p>
+                <p>Remember to let her into your heart</p>
+                <p>Then you can start to make it better</p>
+            </div>
+
+            <div class="verse">
+                <p>Hey Jude, don't be afraid</p>
+                <p>You were made to go out and get her</p>
+                <p>The minute you let her under your skin</p>
+                <p>Then you begin to make it better</p>
+            </div>
+
+            <div class="chorus">
+                <p>And anytime you feel the pain, hey Jude, refrain</p>
+                <p>Don't carry the world upon your shoulders</p>
+                <p>For well you know that it's a fool who plays it cool</p>
+                <p>By making his world a little colder</p>
+            </div>
+
+            <div class="verse">
+                <p>Hey Jude, don't let me down</p>
+                <p>You have found her, now go and get her</p>
+                <p>Remember to let her into your heart</p>
+                <p>Then you can start to make it better</p>
+            </div>
+
+            <div class="outro">
+                <p>Na-na-na na-na-na-na, na-na-na, hey Jude</p>
+                <p>Na-na-na na-na-na-na, na-na-na, hey Jude</p>
+                <p>Na-na-na na-na-na-na, na-na-na, hey Jude</p>
+                <p>Na-na-na na-na-na-na, na-na-na, hey Jude</p>
+                <p>Na-na-na na-na-na-na, na-na-na, hey Jude</p>
+            </div>
+        </div>
+
+        <div class="beatles-info">
+            <div class="beatles-fact">
+                <h4>¿Sabías que?</h4>
+                <p>"Hey Jude" fue escrita por Paul McCartney para consolar a Julian Lennon durante el divorcio de sus padres. Es una de las canciones más largas en llegar al #1 (7:11 min).</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Written by: John Lennon and Paul McCartney</p>
+            <p class="copyright">© 1968 Sony/ATV Music Publishing LLC</p>
+        </footer>
+    </div>
+</body>
+</html>

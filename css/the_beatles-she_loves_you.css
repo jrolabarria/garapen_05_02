@@ -1,0 +1,203 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Layout general */
+  .layout {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background-color: #000;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1db954;
+    margin-bottom: 40px;
+  }
+  
+  .nav a,
+  .playlist-links a {
+    display: block;
+    color: #b3b3b3;
+    text-decoration: none;
+    margin: 15px 0;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover,
+  .playlist-links a:hover {
+    color: #fff;
+  }
+  
+  /* Main content */
+  .main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+  }
+  
+  /* Header - canción */
+  .track-hero {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .album-cover img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .track-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .track-type {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #b3b3b3;
+  }
+  
+  .track-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .artist-name {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  .release-date {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* Audio player */
+  .audio-player {
+    margin-bottom: 40px;
+  }
+  
+  audio {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Lyrics */
+  .lyrics-section {
+    margin-bottom: 40px;
+  }
+  
+  .lyrics-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1db954;
+  }
+  
+  .lyrics p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #ddd;
+  }
+  
+  /* Description */
+  .description {
+    margin-bottom: 40px;
+  }
+  
+  .description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1db954;
+  }
+  
+  .description p {
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  /* Credits */
+  .credits h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1db954;
+  }
+  
+  .credit-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .credit-list li {
+    margin-bottom: 8px;
+    color: #aaa;
+  }
+  
+  .credit-list li strong {
+    color: #fff;
+    margin-right: 8px;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .layout {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .nav, .playlist-links {
+      display: none;
+    }
+  
+    .main-content {
+      padding: 20px;
+    }
+  
+    .track-hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .album-cover img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  
