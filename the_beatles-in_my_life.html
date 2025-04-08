@@ -133,6 +133,15 @@
             margin: 5px 0;
             line-height: 1.5;
         }
+
+        .no-link {
+        text-decoration: none;
+        color: inherit; /* Hereda el color del elemento padre */
+    }
+
+    .no-link:hover {
+        color: inherit; /* El color al pasar el ratón será el mismo */
+    }
     </style>
 </head>
 <body>
@@ -192,21 +201,30 @@
     <div class="sidebar-right">
         <h3>Members</h3>
         <div class="member">
-            <img src="img/john lennon.jpg" alt="John Lennon">
-            <span>John Lennon</span>
+            <a href="https://es.wikipedia.org/wiki/John_Lennon" target="_blank" class="no-link">
+                <img src="img/john lennon.jpg" alt="John Lennon">
+                <span>John Lennon</span>
+            </a>
         </div>
         <div class="member">
-            <img src="img/paul mccartney.jpg" alt="Paul McCartney">
-            <span>Paul McCartney</span>
+            <a href="https://es.wikipedia.org/wiki/Paul_McCartney" target="_blank" class="no-link">
+                <img src="img/paul mccartney.jpg" alt="Paul McCartney">
+                <span>Paul McCartney</span>
+            </a>
         </div>
         <div class="member">
-            <img src="img/George Harrison.jpg" alt="George Harrison">
-            <span>George Harrison</span>
+            <a href="https://es.wikipedia.org/wiki/George_Harrison" target="_blank" class="no-link">
+                <img src="img/George Harrison.jpg" alt="George Harrison">
+                <span>George Harrison</span>
+            </a>
         </div>
         <div class="member">
-            <img src="img/ringo-starr.jpeg" alt="Ringo Starr">
-            <span>Ringo Starr</span>
+            <a href="https://es.wikipedia.org/wiki/Ringo_Starr" target="_blank" class="no-link">
+                <img src="img/ringo-starr.jpeg" alt="Ringo Starr">
+                <span>Ringo Starr</span>
+            </a>
         </div>
+        
     </div>
     <script>
         let scrollInterval;
