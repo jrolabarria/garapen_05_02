@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.header img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+  /* Espacio entre la imagen y el texto */
+}
+
+.header-text {
+  text-align: left;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  font-size: 18px;
+  color: #dddddd;
+}
+
+
+header img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin-left: 20%;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.sidebar {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  width: 80%;
+  padding: 15px;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #4a4aff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.section2,
+.section3 {
+  background-color: #f0f0f0;
+  padding: 20px;
+  min-height: 400px;
+  border-radius: 10px;
+}
+
+.section2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* 2 partes para la izquierda y 1 para la derecha */
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-side {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.right-side {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.song-description {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+pre {
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+
+.eleanor-description {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+  /* Blanco para la caja */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.song-suggestions {
+  margin-top: 30px;
+}
+
+.song-suggestions h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.suggested-songs {
+  display: block;
+}
+
+.song-button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.song-button:hover {
+  background-color: #817f7b;
+}
+
+  .song-button:focus {
+    outline: none;
+  }
+
+
+  .song-rating {
+    margin-top: 30px;
+  }
+
+  .song-rating h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2em;
+    cursor: pointer;
+  }
+
+  .star {
+    color: #ccc;
+    /* Color inicial (gris claro) */
+    transition: color 0.2s ease;
+  }
+
+  .star:hover,
+  .star.selected {
+    color: #f7c100;
+    /* Color dorado al pasar o seleccionar */
+  }
+
+  .rating-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #555;
+  }
+
+
+  .video-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Le da un borde redondeado al video */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Agrega una sombra sutil al video */
+  }
+
+
+  .section3 {
+    padding: 40px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .section3 h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+  .beatles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 1;
+    list-style: none;
+  }
+
+  .beatles-list li {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .beatles-list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .beatles-list img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .beatles-list .member-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+  }
+
+  .beatles-list .birth-date {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 20px;
+  }
+
+  .beatles-list a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+
+  .beatles-list a:hover {
+    color: #f7c100;
+  }
